@@ -1,7 +1,15 @@
 $(function () {
     $('#container').bind('click', function () {
         console.log("click");
-        motionMgr.startMotion(motions['yes']);
+        var names = [
+            'yes',
+            'no',
+            //'shake',
+            'question'
+        ];
+        var name = names[parseInt(Math.random() * names.length)];
+        console.log(name);
+        motionMgr.startMotion(motions[name]);
     });
 });
 
