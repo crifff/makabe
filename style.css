@@ -7,7 +7,7 @@ body {
 
 #container {
     width: 320px;
-    height: 480px;
+    height: 460px;
     background-size: 650px;
     background: url(/images/background.jpg) -100px 0;
     overflow: hidden;
