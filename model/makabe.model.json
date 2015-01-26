@@ -1,0 +1,8 @@
+{
+	"type": "Live2D Model Setting",
+	"name": "makabe",
+	"model": "makabe.moc",
+	"textures": [
+		"makabe.1024/texture_00.png"
+	]
+}
