@@ -1,5 +1,5 @@
-$(function(){
-	$('#container').click(function(){
-		motionMgr.startMotion(motions['yes']);
-	});
+$(function () {
+    $('#container').click(function () {
+        motionMgr.startMotion(motions['yes']);
+    });
 });

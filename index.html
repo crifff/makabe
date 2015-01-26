@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Macabee</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Macabee</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=4.0">
-		<link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=4.0">
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body onload="Simple()">
+<div id="container">
+    <canvas id="glcanvas" width="320" height="480"></canvas>
+</div>
 
-	</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- Live2D Library -->
+<script src="lib/live2d.min.js"></script>
+<script src="framework/Live2DFramework.js"></script>
 
-	<body onload="Simple()">
-		<div id="container">
-			<canvas id="glcanvas" width = "320" height="480"></canvas>
-		</div>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<!-- Live2D Library -->
-		<script src="lib/live2d.min.js"></script> 
-		<script src="framework/Live2DFramework.js"></script> 
-
-		<!-- User's Script -->
-		<script src="src/Simple.js"></script>
-		<script src="script.js"></script> 
-	</body>
+<!-- User's Script -->
+<script src="src/Simple.js"></script>
+<script src="script.js"></script>
+</body>
 </html>

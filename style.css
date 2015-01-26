@@ -1,16 +1,17 @@
-body{
-  margin:0;
-  padding:0;
-  border:0;
-  background-color:#000;
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #000;
 }
+
 #container {
-	width:320px;
-	height:480px;
-	background-image: url(../images/background.jpg);
-	background-size:650px;
-	background-position:-100px 0;
-	overflow:hidden;
+    width: 320px;
+    height: 480px;
+    background-size: 650px;
+    background: url(/images/background.jpg) -100px 0;
+    overflow: hidden;
 }
-#glcanvas{
+
+#glcanvas {
 }

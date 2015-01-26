@@ -1,22 +1,38 @@
 {
-	"version":"Sample 1.0.0",
-	"model":"/Users/hossy/live2d/makabe/model/model.moc",
-	"textures":[
-		"/Users/hossy/live2d/makabe/model/model.1024/texture_00.png"
-	],
-	"motions":{
-		"idle":[
-			{"file":"/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_idle_01.mtn"}
-		],
-		"":[
-			{"file":"/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_01.mtn"},
-			{"file":"/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_02.mtn"},
-			{"file":"/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_03.mtn"},
-			{"file":"/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_04.mtn"},
-			{"file":"/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_05.mtn"},
-			{"file":"/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_06.mtn"},
-			{"file":"/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_shake_01.mtn"}
-		]
-	},
-	"physics":"/Users/hossy/live2d/makabe/model"
+    "version": "Sample 1.0.0",
+    "model": "/Users/hossy/live2d/makabe/model/model.moc",
+    "textures": [
+        "/Users/hossy/live2d/makabe/model/model.1024/texture_00.png"
+    ],
+    "motions": {
+        "idle": [
+            {
+                "file": "/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_idle_01.mtn"
+            }
+        ],
+        "": [
+            {
+                "file": "/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_01.mtn"
+            },
+            {
+                "file": "/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_02.mtn"
+            },
+            {
+                "file": "/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_03.mtn"
+            },
+            {
+                "file": "/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_04.mtn"
+            },
+            {
+                "file": "/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_05.mtn"
+            },
+            {
+                "file": "/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_m_06.mtn"
+            },
+            {
+                "file": "/Users/hossy/Downloads/Live2D_SDK_WebGL_2.0.00_jp/sample/miku/assets/runtime/motions/miku_shake_01.mtn"
+            }
+        ]
+    },
+    "physics": "/Users/hossy/live2d/makabe/model"
 }
