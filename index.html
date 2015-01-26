@@ -6,11 +6,33 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=4.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
 </head>
 
 <body onload="Simple()">
 <div id="container">
-    <canvas id="glcanvas" width="320" height="480"></canvas>
+    <div id="help-btn"></div>
+    <div id="help" class="animated">
+        <div class="container">
+            <h1>へるぷ</h1>
+
+            <h2>動作環境</h2>
+            <ul>
+                <li>WebGLに対応した環境が必要です</li>
+                <li>iOS8以降</li>
+                <li>android5.0以降、あるいはAndroid版Chromeの最新版</li>
+                <li>PCでは最新版のブラウザをご利用下さい</li>
+            </ul>
+            <h2>操作</h2>
+            <ul>
+                <li>つつくとちょっと動きます</li>
+                <li>ドラッグすると追いかけます</li>
+                <li><s>π touch</s> ありません</li>
+            </ul>
+
+        </div>
+    </div>
+    <canvas id="glcanvas" class="animated" width="320" height="480"></canvas>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
