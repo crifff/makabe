@@ -15,12 +15,12 @@ $(function () {
         var canvas = $('#glcanvas');
 
 
-        if (canvas.hasClass('flipInY')) {
-            canvas.removeClass('flipInY');
-            canvas.addClass('flipOutY');
-        } else {
+        if (canvas.hasClass('flipOutY') && !canvas.hasClass('flipInY')) {
             canvas.removeClass('flipOutY');
             canvas.addClass('flipInY');
+        } else {
+            canvas.removeClass('flipInY');
+            canvas.addClass('flipOutY');
         }
         e.preventDefault();
     });
