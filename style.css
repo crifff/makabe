@@ -11,6 +11,7 @@ body {
     background-size: 650px;
     background: url(/images/background.jpg) -100px 0;
     overflow: hidden;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
 #glcanvas {
