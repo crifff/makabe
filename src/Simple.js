@@ -72,10 +72,8 @@ var Simple = function () {
     }
 
     $("#container").bind(start, function (e) {
-
         console.log("down");
         mousedown = true;
-        handler(e);
     }).bind(end, function () {
         console.log("up");
         mousedown = false;
