@@ -75,7 +75,7 @@ var Simple = function () {
 
         var cancelAnimationFrame =
             window.cancelAnimationFrame ||
-                window.mozCancelAnimationFrame;
+            window.mozCancelAnimationFrame;
         cancelAnimationFrame(requestID); //アニメーションを停止
 
         e.preventDefault();
@@ -152,9 +152,9 @@ Simple.initLoop = function (canvas/*HTML5 canvasオブジェクト*/) {
 
         var requestAnimationFrame =
             window.requestAnimationFrame ||
-                window.mozRequestAnimationFrame ||
-                window.webkitRequestAnimationFrame ||
-                window.msRequestAnimationFrame;
+            window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.msRequestAnimationFrame;
         requestID = requestAnimationFrame(tick, canvas);// 一定時間後に自身を呼び出す
     })();
 };
@@ -187,10 +187,10 @@ Simple.draw = function (gl/*WebGLコンテキスト*/) {
         live2DModel.setGL(gl);
 
         // 表示位置を指定するための行列を定義する
-        var size = 2.0;
+        var size = 1.8;
         var w = 1.0 / live2DModel.getCanvasWidth() * size;
         var h = 1.5 / live2DModel.getCanvasHeight() * size;
-        var matrix4x4 = [ h, 0, 0, 0 , 0, -w, 0, 0 , 0, 0, 1, 0 , -1.5, 0.99, 0, 1 ];
+        var matrix4x4 = [h, 0, 0, 0, 0, -w, 0, 0, 0, 0, 1, 0, -1.35, 0.78, 0, 1];
         live2DModel.setMatrix(matrix4x4);
 
     }
@@ -220,7 +220,7 @@ Simple.draw = function (gl/*WebGLコンテキスト*/) {
  * WebGLのコンテキストを取得する
  */
 Simple.getWebGLContext = function (canvas/*HTML5 canvasオブジェクト*/) {
-    var NAMES = [ "webgl" , "experimental-webgl" , "webkit-3d" , "moz-webgl"];
+    var NAMES = ["webgl", "experimental-webgl", "webkit-3d", "moz-webgl"];
 
     var param = {
         alpha: true,
