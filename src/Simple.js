@@ -40,6 +40,7 @@ var Simple = function () {
 
 
     this.mousedown = false;
+    this.mousemove = false;
     this.point = {x: 0, y: 0};
 
     var isTouch = ('ontouchstart' in window);
@@ -49,6 +50,7 @@ var Simple = function () {
         var move = 'touchmove';
         var handler = function (e) {
             if (mousedown) {
+                mousemove = true;
                 var touch = e.originalEvent.touches[0];
                 var x = (touch.pageX / 160 ) - 1;
                 var y = ((touch.pageY / 240) - 1) * -1;
@@ -63,6 +65,7 @@ var Simple = function () {
 
         var handler = function (e) {
             if (mousedown) {
+                mousemove = true;
                 var x = (e.clientX / 160 ) - 1;
                 var y = ((e.clientY / 240) - 1) * -1;
                 point = {x: x, y: y};
@@ -77,6 +80,8 @@ var Simple = function () {
     }).bind(end, function () {
         console.log("up");
         mousedown = false;
+
+        mousemove = false;
     }).bind(move, handler);
 
     /**
@@ -245,7 +250,7 @@ Simple.draw = function (gl/*WebGLコンテキスト*/) {
             motionMgr.updateParam(live2DModel);
         }
     }
-    if (mousedown) {
+    if (mousemove) {
         //console.log(point);
         //顔の向き
         live2DModel.addToParamFloat("PARAM_ANGLE_X", point['x'] * 30, 1);//-30から30の値を加える
