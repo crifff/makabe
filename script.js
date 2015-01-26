@@ -11,6 +11,19 @@ $(function () {
         console.log(name);
         motionMgr.startMotion(motions[name]);
     });
+    $('#help-btn').click(function (e) {
+        var canvas = $('#glcanvas');
+
+
+        if (canvas.hasClass('flipInY')) {
+            canvas.removeClass('flipInY');
+            canvas.addClass('flipOutY');
+        } else {
+            canvas.removeClass('flipOutY');
+            canvas.addClass('flipInY');
+        }
+        e.preventDefault();
+    });
 });
 
 // スクロールを抑止する関数
@@ -26,3 +39,20 @@ function preventScroll(event) {
 
 // タッチイベントの初期化
 document.addEventListener("touchmove", preventScroll, false);
+
+var CanvasDetector = {
+    canCanvas: function () {
+        return !!window.CanvasRenderingContext2D
+    },
+    canWebGL: function () {
+        try {
+            return !!window.WebGLRenderingContext && !!document.createElement('canvas').getContext('experimental-webgl');
+        } catch (e) {
+            return false;
+        }
+    }
+};
+
+if (!CanvasDetector.canWebGL()) {
+    alert("WebGL非対応の環境では動作しません");
+}
