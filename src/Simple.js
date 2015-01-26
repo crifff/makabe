@@ -6,7 +6,7 @@
  *
  *  (c) Live2D Inc. All rights reserved.
  */
-
+hoge = null;
 var Simple = function () {
     Simple.mylog("--> Simple()");
 
@@ -37,6 +37,49 @@ var Simple = function () {
     this.motion = null;     // モーション
     this.motions = {};     // モーション
     this.motionMgr = null;  // モーションマネジャー
+
+
+    this.mousedown = false;
+    this.point = {x: 0, y: 0};
+
+    var isTouch = ('ontouchstart' in window);
+    if (isTouch) {
+        var start = 'touchstart';
+        var end = 'touchend';
+        var move = 'touchmove';
+        var handler = function (e) {
+            if (mousedown) {
+                var touch = e.originalEvent.touches[0];
+                var x = (touch.pageX / 160 ) - 1;
+                var y = ((touch.pageY / 240) - 1) * -1;
+                point = {x: x, y: y};
+                //console.log(point);
+            }
+        };
+    } else {
+        var start = 'mousedown';
+        var end = 'mouseup';
+        var move = 'mousemove';
+
+        var handler = function (e) {
+
+            if (mousedown) {
+
+                var x = (e.clientX / 160 ) - 1;
+                var y = ((e.clientY / 240) - 1) * -1;
+                point = {x: x, y: y};
+                // console.log({x: e.clientX, y: e.clientY});
+            }
+        };
+    }
+
+    $("#container").bind(start, function () {
+        console.log("down");
+        mousedown = true;
+    }).bind(end, function () {
+        console.log("up");
+        mousedown = false;
+    }).bind(move, handler);
 
     /**
      * Live2D モデル設定。
@@ -200,8 +243,18 @@ Simple.draw = function (gl/*WebGLコンテキスト*/) {
             //Simple.mylog("--> StartMotion");
             motionMgr.startMotion(motions['idle']);
         }
-        motionMgr.updateParam(live2DModel);
+        if (!mousedown) {
+            motionMgr.updateParam(live2DModel);
+        }
     }
+    if (mousedown) {
+        //console.log(point);
+        live2DModel.addToParamFloat("PARAM_ANGLE_X", point['x'] * 30, 1);//-30から30の値を加える
+        live2DModel.addToParamFloat("PARAM_ANGLE_Y", point['y'] * 30, 1);
+    }
+
+
+    //
 
 
     // キャラクターのパラメータを適当に更新
