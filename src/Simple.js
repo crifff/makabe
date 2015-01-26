@@ -53,7 +53,7 @@ var Simple = function () {
                 var x = (touch.pageX / 160 ) - 1;
                 var y = ((touch.pageY / 240) - 1) * -1;
                 point = {x: x, y: y};
-                //console.log(point);
+                console.log(point);
             }
         };
     } else {
@@ -62,20 +62,20 @@ var Simple = function () {
         var move = 'mousemove';
 
         var handler = function (e) {
-
             if (mousedown) {
-
                 var x = (e.clientX / 160 ) - 1;
                 var y = ((e.clientY / 240) - 1) * -1;
                 point = {x: x, y: y};
-                // console.log({x: e.clientX, y: e.clientY});
+                console.log(point);
             }
         };
     }
 
-    $("#container").bind(start, function () {
+    $("#container").bind(start, function (e) {
+
         console.log("down");
         mousedown = true;
+        handler(e);
     }).bind(end, function () {
         console.log("up");
         mousedown = false;
