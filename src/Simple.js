@@ -247,8 +247,15 @@ Simple.draw = function (gl/*WebGLコンテキスト*/) {
     }
     if (mousedown) {
         //console.log(point);
+        //顔の向き
         live2DModel.addToParamFloat("PARAM_ANGLE_X", point['x'] * 30, 1);//-30から30の値を加える
         live2DModel.addToParamFloat("PARAM_ANGLE_Y", point['y'] * 30, 1);
+        //体の向きの調整
+        live2DModel.addToParamFloat("PARAM_BODY_ANGLE_X", point['x'] * 10, 1);//-10から10の値を加える
+
+        //目の向きの調整
+        live2DModel.addToParamFloat("PARAM_EYE_BALL_X", point['x'], 1);//-1から1の値を加える
+        live2DModel.addToParamFloat("PARAM_EYE_BALL_Y", point['y'], 1);
     }
 
 
